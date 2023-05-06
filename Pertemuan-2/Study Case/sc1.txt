@@ -1,0 +1,23 @@
+Tulis 10 tag yang termasuk display inline!
+1. a
+2. label
+3. img
+4. input
+5. button
+6. select
+7. textarea
+8. span
+9. strong
+10. time
+
+Tulis 10 tag yang termasuk display block!
+1. p
+2. h1
+3. div
+4. ul
+5. ol
+6. li
+7. nav
+8. header
+9. section
+10. table

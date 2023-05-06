@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan CSS</title>
+
+    <link rel="stylesheet" href="latihan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        p {
+            color: grey;
+            font-size: 24px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .paraf {
+            color: black;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        #satu, #dua, .coba {
+            color: salmon;
+        }
+
+        .test {
+            text-align: center;
+        }
+
+        .bg-kuning {
+            background-color: yellow;
+        }
+
+        /* Pseudo class */
+        .bg-kuning:hover {
+            background-color: blue;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- metode inline -->
+    <h1 class="bg-kuning" style="color:red">Hello Dunia</h1>
+
+    <!-- metode internal -->
+    <p>Welcome to my side</p>
+    <p class="paraf">ini paragraf 2</p>
+    <p class="paraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur?</p>
+    <p class="coba">Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+        <li id="satu">satu</li>
+        <li id="dua">dua</li>
+        <li>tiga</li>
+    </ul>
+
+    <a href="#">Link</a>
+
+    <p class="paraf test bg-kuning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet impedit optio, 
+        unde fugiat deserunt voluptate ea reprehenderit modi asperiores, fugit sed veniam 
+        cupiditate quam dolores molestias debitis enim temporibus officia dolorum. Illum 
+        dolor voluptates doloribus provident deserunt porro corporis repellendus nobis ipsa 
+        et? Dicta, similique laborum. Cupiditate veniam corporis suscipit!</p>
+</body>
+</html>
