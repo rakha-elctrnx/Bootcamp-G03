@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        div {
+            background-color: aquamarine;
+            width: 80%;
+            height: 350px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            display: block;
+        }
+
+        span:first-child {
+            background-color: salmon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span:last-child {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>start</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
