@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JS</title>
+</head>
+<body>
+    <script>
+
+        // let saldo = 2500000;
+
+        // function mainFunction() {
+        //     let exit = false;
+
+        //     alert("Halo! selamat datang di program bank")
+
+        //     while (!exit) {
+        //         let menu = prompt("Silahkan pilih salah satu untuk melanjutkan \n 1. Cek Saldo \n 2. Setor Tunai \n 3. Tarik Tunai \n 4. Keluar \n \n Contoh: 1");
+        //         let menuAnswer = parseInt(menu);
+
+        //         if (menuAnswer != null || menuAnswer >= 1 ||  menuAnswer <= 4) {
+        //             switch (menuAnswer) {
+        //                 case 1:
+        //                     cekSaldo();
+        //                     break;
+        //                 case 2:
+        //                     setorTunai();
+        //                     break;
+        //                 case 3:
+        //                     tarikTunai();
+        //                     break;
+        //                 case 4:
+        //                     if (confirm("Apakah anda yakin ingin keluar?") == true) {
+        //                         exit = true;
+        //                     }
+        //                     break;
+        //                 default:
+        //                     break;
+        //             }                    
+        //         } else {
+        //             alert("Silahkan masukkan pilihan yang valid")
+        //         }
+
+        //     }
+        // }
+
+        // function cekSaldo() {
+        //     alert("Jumlah saldo anda adalah : \n Rp. " + saldo);
+        // }
+
+        // function setorTunai() {
+        //     let isValid = false;
+        //     while (!isValid) {
+        //         nominal = parseInt(prompt("Silahkan ketik nominal jumlah uang yang akan disetor"));
+        //         if (isNaN(nominal) || nominal == null || nominal < 0 ) {
+        //             alert("Silahkan masukkan nominal yang valid!")
+        //         } else {
+        //             isValid = true
+        //         }
+        //     }
+
+        //     if (confirm("Apakah anda yakin?") == true) {
+        //         saldo += parseInt(nominal);
+        //         status = "Transaksi anda berhasil! \n Saldo anda : " + saldo;
+        //     } else {
+        //         status = "Transaksi anda dibatalkan!";
+        //     }
+            
+        //     alert(status)
+        // }
+
+        // function tarikTunai() {
+        //     let isValid = false;
+        //     while (!isValid) {
+        //         nominal = parseInt(prompt("Silahkan ketik nominal jumlah uang yang akan ditarik \n Saldo anda : Rp. " + saldo));
+        //         if (isNaN(nominal) || nominal == null || nominal < 0 ) {
+        //             alert("Silahkan masukkan nominal yang valid!");
+        //         } else if (nominal > saldo) {
+        //             alert("Saldo tidak mencukupi!");
+        //             alert("Transaksi anda dibatalkan!");
+        //             return;
+        //         } else {
+        //             isValid = true
+        //         }
+        //     }
+
+        //     if (confirm("Apakah anda yakin?") == true) {
+        //         saldo -= parseInt(nominal);
+        //         status = "Transaksi anda berhasil! \n Saldo anda : " + saldo;
+        //     } else {
+        //         status = "Transaksi anda dibatalkan!";
+        //     }
+            
+        //     alert(status)
+        // }
+
+        // mainFunction();
+    </script>
+
+    <script>
+        let bankOnline = (
+            function() {
+                return function main() {
+                    let saldo = 0;
+                    let menu = parseInt(prompt("Silahkan pilih salah satu untuk melanjutkan \n 1. Cek Saldo \n 2. Setor Tunai \n 3. Tarik Tunai \n 4. Keluar \n \n Contoh: 1"))
+
+                    if (menu == 1) {
+                        alert("Jumlah saldo anda adalah : \n Rp. " + saldo);
+                    } else if (menu == 2) {
+                        let isValid = false;
+                        while (!isValid) {
+                            nominal = parseInt(prompt("Silahkan ketik nominal jumlah uang yang akan disetor"));
+                            if (isNaN(nominal) || nominal == null || nominal < 0 ) {
+                                alert("Silahkan masukkan nominal yang valid!")
+                            } else {
+                                isValid = true
+                            }
+                        }
+
+                        if (confirm("Apakah anda yakin?") == true) {
+                            saldo += parseInt(nominal);
+                            status = "Transaksi anda berhasil! \n Saldo anda : " + saldo;
+                        } else {
+                            status = "Transaksi anda dibatalkan!";
+                        }
+                        
+                        alert(status)
+                    } else if (menu == 3) {
+                        let isValid = false;
+                        while (!isValid) {
+                            nominal = parseInt(prompt("Silahkan ketik nominal jumlah uang yang akan ditarik \n Saldo anda : Rp. " + saldo));
+                            if (isNaN(nominal) || nominal == null || nominal < 0 ) {
+                                alert("Silahkan masukkan nominal yang valid!");
+                            } else if (nominal > saldo) {
+                                alert("Saldo tidak mencukupi!");
+                                alert("Transaksi anda dibatalkan!");
+                                return;
+                            } else {
+                                isValid = true
+                            }
+                        }
+
+                        if (confirm("Apakah anda yakin?") == true) {
+                            saldo -= parseInt(nominal);
+                            status = "Transaksi anda berhasil! \n Saldo anda : " + saldo;
+                        } else {
+                            status = "Transaksi anda dibatalkan!";
+                        }
+                        
+                        alert(status)
+                    } else {
+                        let kondisi = confirm("Lanjut Gak?")
+                        if (kondisi) {
+                            return main()
+                        } else {
+                            return "Terima Kasih Telag menggunakan layanan kami"
+                        }
+                    }
+
+                    return main()
+                }
+            }            
+        )()
+
+        alert(bankOnline());
+    </script>
+</body>
+</html>
