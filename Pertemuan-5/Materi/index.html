@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan HTML</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // document.querySelector('#root').innerHTML = "<h1>Hallo Dunia</h1>"
+
+        // let var1 = 'Kutip dua'
+        // let var2 = 'Kutip satu'
+        // let var3 = 'backtip'
+
+        // console.log("Hallo dunia " + var1 + "Untuk string");
+        // console.log('Hallo Dunia ' + var2);
+
+        // // Template Literal
+        // console.log(`Hallo Dunia ${var3} untuk backtip`);
+        // console.log(`1 + 1 = ${1 + 1}.`);
+        // let gender = "alien"
+
+        // console.log(`Hallo ${ gender === 'cewe' ? 'cantik' : (gender === 'cowo' ? 'ganteng' : 'kamu' )} Jangan lupa sarapan`);
+
+
+    </script>
+    <script>
+        let DataBase = [
+            {
+                nama: "Bagas",
+                hobi: "game"
+            },
+            {
+                nama: "alif",
+                hobi: "Musik"
+            },
+            {
+                nama: "irfan",
+                hobi: "bola"
+            }
+        ]
+
+        function Home() {
+            return `
+            <h1>Hello World</h1>
+            <p>ini website saya selamat datang</p>
+            `
+        }
+
+        function List(nama, hobi) {
+            return `
+            <ul>
+                <li>Nama Depan: ${nama}</li>
+                <li>Nama Belakang: ${hobi}</li>
+            </ul>
+            `
+        }
+
+        document.querySelector("#root").innerHTML = Home()
+        // DataBase.map(data => {
+        //     document.querySelector("#root").innerHTML += List(data.nama, data.hobi)
+        // })
+
+        // Fetching API data
+        fetch("https://reqres.in/api/users?page=2")
+            .then(res => res.json())
+            .then(res => res.data.map(response => 
+                document.querySelector("#root").innerHTML += List(response.first_name, response.last_name))
+            )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-color: #EEEEEE;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.circle {
+    position: absolute;
+    top: -160px;
+    right: -80px;
+    width: 40%;
+    height: 80%;
+    background-color: #00ADB5;
+    border-radius: 50%;
+    z-index: 1;
+}
+.contact {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    margin-left: 20px;
+}
+.contact div {
+    margin-bottom: 30px;
+}
+.contact div:hover {
+    cursor: pointer;
+}
+button:hover {
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 60%;
+    background-color: #FFFFFF;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+.card-left, .card-right {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.card-left {
+    background-color: #00ADB5;
+    border-radius: 30px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+}
+.card-left .title {
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 15%;
+    margin-left: 10%;
+}
+.card-left p {
+    font-size: 20px;
+    width: 65%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.card-left img {
+    margin-top: 5%;
+    margin-right: 5%;
+    width: 65%;
+    float: right;
+}
+.card-right {
+    text-align: center;
+}
+.card-right .title{
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    color: #00ADB5;
+}
+.form {
+    display: flex;
+    background-color: #e5e5e5;
+    width: 75%;
+    height: 12%;
+    margin: auto;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    text-align: start;
+}
+.card-right .form .icon {
+    display: inline-flex;
+    margin: auto 0px;
+    width: 20%;
+    height: 70%;
+    border-right: 2px solid #C4C4C4;
+}
+.card-right .form input {
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+    padding-left: 5%;
+    font-size: 15px;
+    outline: none;
+    color: #797878;
+}
+.icon img {
+    margin: auto;
+}
+.forgot {
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    color: #333333;
+    font-size: 13px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+button {
+    width: 50%;
+    height: 12%;
+    color: #FFFFFF;
+    background-color: #AAD8D3;
+    border: none;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 700;
+}
+#copyright {
+    position: absolute;
+    left: 42%;
+    bottom: 10px;
+}
+.toggle {
+    position: absolute;
+    z-index: 5;
+    width: 80px;
+    height: 40px;
+    top: 40px;
+    right: 80px;
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.toggle span {
+    /* border: 1px solid red; */
+    height: 98%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.toggle:hover {
+    cursor: pointer;
+}
+.toggle span svg{
+    width: 60%;
+    margin: auto;
+}
+#night-btn {
+    background-color: #333333;
+}
+.bg-dark {
+    background-color: #171717;
+}
+.card-dark {
+    background-color: #333333;
+    color: #FFFFFF;
+    background: rgba(51, 51, 51, 0.75);
+}
+.btn-dark {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+.form-dark {
+    background-color: #262626;
+    color: #FFFFFF;
+}
+.text-dark {
+    color: white;
+}
